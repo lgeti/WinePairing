@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aa3939;
+    width: auto;
+}
+
+.content {
+    margin: 16px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px 16px 10px;
+    width: 100%;
+}
+
+.group {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 16px 0 16px 0;
+    text-align: center;
+    color: #550000;
+}
+
+p {
+    font-size: 16px;
+    color: #d46a6a;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 150px; /* Set a fixed height for the images */
+    height: 100px; /* Set a fixed height for the images */
+    object-fit: contain; /* Add this line to maintain aspect ratio */
+    background-color: #550000; /* Add this line to add black bars/background */
+}
