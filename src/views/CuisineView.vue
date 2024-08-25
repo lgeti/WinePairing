@@ -47,23 +47,23 @@ const getWinePairing = async () => {
 </script>
 
 <template>
-    <div class="h-screen">
-        <h1>Get a Wine pairing based on the cuisine:</h1>
+    <div class="h-screen flex flex-col ">
+        <h1 class="font-mono text-9xl text-center m-9">Get a Wine pairing based on the cuisine:</h1>
         
         <form v-on:submit.prevent="getWinePairing">
-            <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Price</label>
-            <div class="relative mt-2 rounded-md shadow-sm">
-                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                </div>
-                <input ref="inputRef" type="text" name="input" v-model="input" class="block w-1/4 rounded-md border-0 py-1.5 pl-2 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" :placeholder="placeholder === 'Cuisine' ? 'Italian' : placeholder === 'Dish' ? 'Spaghetti Carbonara' : 'Salmon'" defaultValue="placeholder"/>
-                <button type="submit">Get Wine Pairing</button>
+            <label for="price" class="block font-medium leading-6 text-gray-900 font-mono text-5xl text-center my-24">Insert a <b>cuisine</b>, down below <b>vvv</b></label>
+            <div class="m-4 shadow-sm flex justify-center items-center">
+                <input ref="inputRef" type="text" name="input" v-model="input" class="w-1/4 py-4 pl-4 pr-30 font-mono text-gray-900 rounded-l-md" :placeholder="placeholder === 'Cuisine' ? 'Italian' : placeholder === 'Dish' ? 'Spaghetti Carbonara' : 'Salmon'" defaultValue="placeholder"/>
+                <button type="submit" class="rounded-r-md bg-red-950 text-gray-200 py-4 pl-4 pr-4 font-mono">Get Wine Pairing</button>
             </div>
         </form>
 
-        <div v-if="trn" class="bg-primary-500 rounded-xl shadow-md relative">
-            <div class="p-4">
-                <div class="mb-3">
-                    <h3 class="text-secondary-100 text-xl font-bold">{{ data.pairingText }}</h3>
+        <div v-if="trn" class="relative flex flex-col items-center m-32">
+            <h3 class="text-secondary-100 text-4xl font-bold text-center rounded-lg bg-primary-200 p-4">Wine Pairing:</h3>
+
+            <div class="p-10 m-5 bg-primary-500 rounded-xl">
+                <div>
+                    <h3 class="text-secondary-100 text-2xl font-bold">{{ data.pairingText ? data.pairingText : 'Sorry, we have no results for ' + input }}</h3>
                 </div>
             </div>
         </div>

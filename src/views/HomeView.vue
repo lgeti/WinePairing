@@ -6,7 +6,7 @@ import RandomRecommendation from '@/components/RandomRecommendation.vue';
 </script>
 
 <template>
-    <div class="flex flex-col justify-between h-screen">
+    <div class="flex flex-col justify-start h-screen">
         <About title="Wine Pairing" text="Welcome to our website! We provide wine recommendations based on cuisine, food, or ingredient." />
         <Groups />
         <RandomRecommendation />
